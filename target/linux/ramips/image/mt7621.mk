@@ -595,8 +595,8 @@ define Device/xiaomi_redmi-router-ac2100
 endef
 TARGET_DEVICES += xiaomi_redmi-router-ac2100
 
-define Device/xiaomi_r2100
-  DTS := r2100
+define Device/xiaomi_mi-router-ac2100
+  DTS := mi-router-ac2100
   BLOCKSIZE := 128k
   PAGESIZE := 2048
   KERNEL_SIZE := 4096k
@@ -606,10 +606,10 @@ define Device/xiaomi_r2100
   IMAGE/kernel1.bin := append-kernel
   IMAGE/rootfs0.bin := append-ubi | check-size
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
-  DEVICE_TITLE := Xiaomi Mi AC2100
+  DEVICE_TITLE := Xiaomi Mi Router AC2100
   DEVICE_PACKAGES := kmod-mt7603 kmod-mt7615e wpad-basic uboot-envtools
 endef
-TARGET_DEVICES += xiaomi_r2100
+TARGET_DEVICES += xiaomi_mi-router-ac2100
 
 
 define Device/wndr3700v5
